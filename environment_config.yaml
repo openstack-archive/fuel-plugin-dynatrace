@@ -3,9 +3,36 @@ attributes:
     # Settings group can be one of "general", "security", "compute", "network",
     # "storage", "logging", "openstack_services" and "other".
     group: 'other'
-  fuel-plugin-dynatrace_text:
-    value: 'Set default value'
-    label: 'Text field'
-    description: 'Description for text field'
-    weight: 25
+
+  fuel-plugin-dynatrace_checkbox:
+    type: "checkbox"
+    weight: 10
+    value: false
+    label: "Install Dynatrace Ruxit agent"
+    description: "Dynatrace Ruxit agent will be installed on all nodes"
+
+  fuel-plugin-dynatrace_tenant:
     type: "text"
+    weight: 20
+    value: ""
+    label: "Dynatrace Ruxit Tenant ID"
+    description: "Dynatrace Ruxit Tenant ID description"
+    restricitons:
+      - condition: "not (settings:fuel-plugin-dynatrace_checkbox)"
+        action: hide
+    regex:
+      source: '\S'
+      error: "Dynatrace Ruxit Tenant ID must not be empty"
+
+  fuel-plugin-dynatrace_token:
+    type: "text"
+    weight: 30
+    value: ""
+    label: "Dynatrace Ruxit Token"
+    description: "Dynatrace Ruxit Token description"
+    restricitons:
+      - condition: "not (settings:fuel-plugin-dynatrace_checkbox)"
+        action: hide
+    regex:
+      source: '\S'
+      error: "Dynatrace Ruxit Token must not be empty"

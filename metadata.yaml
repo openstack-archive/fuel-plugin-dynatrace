@@ -5,13 +5,13 @@ title: Title for fuel-plugin-dynatrace plugin
 # Plugin version
 version: '1.0.0'
 # Description
-description: Please describe your plugin here
+description: Plugin for OpenStack Fuel that installs the Dynatrace Ruxit agent
 # Required fuel version
 fuel_version: ['8.0']
 # Specify license of your plugin
 licenses: ['Apache License Version 2.0']
 # Specify author or company name
-authors: ['Specify author or company name']
+authors: ['Dirk Wallerstorfer (dirk.wallerstorfer@dynatrace.com), Dynatrace']
 # A link to the plugin's page
 homepage: 'https://github.com/openstack/fuel-plugins'
 # Specify a group which your plugin implements, possible options:
@@ -20,7 +20,7 @@ homepage: 'https://github.com/openstack/fuel-plugins'
 groups: []
 # Change `false` to `true` if the plugin can be installed in the environment
 # after the deployment.
-is_hotpluggable: false
+is_hotpluggable: true
 
 # The plugin is compatible with releases in the list
 releases:

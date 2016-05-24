@@ -5,8 +5,8 @@
 # here you can also specify several roles, for example
 # ['cinder', 'compute'] will be applied only on
 # cinder and compute nodes
-- role: ['controller']
-  stage: post_deployment
+- role: '*'
+  stage: post_deployment/8000
   type: shell
   parameters:
     cmd: bash deploy.sh
