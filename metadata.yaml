@@ -7,7 +7,7 @@ version: '1.0.0'
 # Description
 description: Installs the Ruxit agent on all hosts
 # Required fuel version
-fuel_version: ['6.1', '7.0', '8.0', '9.0']
+fuel_version: ['8.0', '9.0']
 # Specify license of your plugin
 licenses: ['Apache License Version 2.0']
 # Specify author or company name
