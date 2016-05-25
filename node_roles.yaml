@@ -1,8 +1,8 @@
-fuel-plugin-dynatrace_role:
+Dynatrace Ruxit:
   # Role name
-  name: "dynatrace"
+  name: "Dynatrace Ruxit"
   # Role description
-  description: "Role for the Dynatrace agent"
+  description: "Installs the Ruxit Agent"
   # If primary then during orchestration this role will be
   # separated into primary-role and role
   has_primary: false
