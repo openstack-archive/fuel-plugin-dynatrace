@@ -8,5 +8,5 @@
   compatible: []
   requires: []
   incompatible: []
-  label: "Dynatrace Ruxit Agent"
-  description: "This plugin installs the Dynatrace Ruxit agent on all nodes."
+  label: "Dynatrace Ruxit"
+  description: "Installs the Ruxit Agent on all hosts"

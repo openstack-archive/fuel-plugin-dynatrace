@@ -1,11 +1,11 @@
 # Plugin name
 name: dynatrace
 # Human-readable name for your plugin
-title: Title for fuel-plugin-dynatrace plugin
+title: Dynatrace Ruxit
 # Plugin version
 version: '1.0.0'
 # Description
-description: Plugin for OpenStack Fuel that installs the Dynatrace Ruxit agent
+description: Installs the Ruxit agent on all hosts
 # Required fuel version
 fuel_version: ['8.0']
 # Specify license of your plugin

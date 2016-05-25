@@ -4,22 +4,12 @@ attributes:
     # "storage", "logging", "openstack_services" and "other".
     #group: 'other'
 
-  enabled:
-    type: "checkbox"
-    weight: 10
-    value: false
-    label: "Install Dynatrace Ruxit agent"
-    description: "Dynatrace Ruxit agent will be installed on all nodes"
-
   ruxit_tenant:
     type: "text"
     weight: 20
     value: ""
     label: "Dynatrace Ruxit Tenant ID"
     description: "Dynatrace Ruxit Tenant ID description"
-    restricitons:
-      - condition: "not (settings:fuel-plugin-dynatrace_checkbox)"
-        action: hide
     regex:
       source: '\S'
       error: "Dynatrace Ruxit Tenant ID must not be empty"
@@ -30,9 +20,6 @@ attributes:
     value: ""
     label: "Dynatrace Ruxit Token"
     description: "Dynatrace Ruxit Token description"
-    restricitons:
-      - condition: "not (settings:fuel-plugin-dynatrace_checkbox)"
-        action: hide
     regex:
       source: '\S'
       error: "Dynatrace Ruxit Token must not be empty"
