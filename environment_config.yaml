@@ -8,18 +8,18 @@ attributes:
     type: "text"
     weight: 20
     value: ""
-    label: "Dynatrace Ruxit Tenant ID"
-    description: "Dynatrace Ruxit Tenant ID description"
+    label: "Ruxit Environment ID"
+    description: "Ruxit Environment ID description"
     regex:
       source: '\S'
-      error: "Dynatrace Ruxit Tenant ID must not be empty"
+      error: "Ruxit Environment ID must not be empty"
 
   ruxit_token:
     type: "text"
     weight: 30
     value: ""
-    label: "Dynatrace Ruxit Token"
-    description: "Dynatrace Ruxit Token description"
+    label: "Ruxit Token"
+    description: "Ruxit Token description"
     regex:
       source: '\S'
-      error: "Dynatrace Ruxit Token must not be empty"
+      error: "Ruxit Token must not be empty"

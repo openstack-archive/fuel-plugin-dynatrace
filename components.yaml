@@ -5,7 +5,7 @@
 # - https://specs.openstack.org/openstack/fuel-specs/specs/8.0/component-registry.html
 
 - name: additional_service:fuel-plugin-dynatrace
-  compatible: []
+  compatible: ['*']
   requires: []
   incompatible: []
   label: "Dynatrace Ruxit"
