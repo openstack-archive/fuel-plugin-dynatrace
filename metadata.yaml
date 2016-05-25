@@ -1,5 +1,5 @@
 # Plugin name
-name: fuel-plugin-dynatrace
+name: dynatrace
 # Human-readable name for your plugin
 title: Title for fuel-plugin-dynatrace plugin
 # Plugin version
@@ -17,7 +17,7 @@ homepage: 'https://github.com/openstack/fuel-plugins'
 # Specify a group which your plugin implements, possible options:
 # network, storage, storage::cinder, storage::glance, hypervisor,
 # equipment
-groups: []
+groups: ['monitoring']
 # Change `false` to `true` if the plugin can be installed in the environment
 # after the deployment.
 is_hotpluggable: true

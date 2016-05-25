@@ -8,5 +8,5 @@
   compatible: []
   requires: []
   incompatible: []
-  label: "Plugin label, that will be shown on UI"
-  description: "Component description (optional)"
+  label: "Dynatrace Ruxit Agent"
+  description: "This plugin installs the Dynatrace Ruxit agent on all nodes."

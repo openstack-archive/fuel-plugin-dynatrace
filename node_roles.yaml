@@ -1,8 +1,8 @@
 fuel-plugin-dynatrace_role:
   # Role name
-  name: "Set here the name for the role. This name will be displayed in the Fuel web UI"
+  name: "dynatrace"
   # Role description
-  description: "Write description for your role"
+  description: "Role for the Dynatrace agent"
   # If primary then during orchestration this role will be
   # separated into primary-role and role
   has_primary: false

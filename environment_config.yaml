@@ -1,17 +1,17 @@
 attributes:
-  metadata:
+  #metadata:
     # Settings group can be one of "general", "security", "compute", "network",
     # "storage", "logging", "openstack_services" and "other".
-    group: 'other'
+    #group: 'other'
 
-  fuel-plugin-dynatrace_checkbox:
+  enabled:
     type: "checkbox"
     weight: 10
     value: false
     label: "Install Dynatrace Ruxit agent"
     description: "Dynatrace Ruxit agent will be installed on all nodes"
 
-  fuel-plugin-dynatrace_tenant:
+  ruxit_tenant:
     type: "text"
     weight: 20
     value: ""
@@ -24,7 +24,7 @@ attributes:
       source: '\S'
       error: "Dynatrace Ruxit Tenant ID must not be empty"
 
-  fuel-plugin-dynatrace_token:
+  ruxit_token:
     type: "text"
     weight: 30
     value: ""

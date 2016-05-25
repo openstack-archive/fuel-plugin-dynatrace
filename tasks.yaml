@@ -7,17 +7,18 @@
 # cinder and compute nodes
 - role: '*'
   stage: post_deployment/8000
-  type: shell
+  type: puppet
   parameters:
-    cmd: bash deploy.sh
-    timeout: 42
+    puppet_manifest: puppet/manifests/deploy.pp
+    puppet_modules: puppet/modules
+    timeout: 420
 # Task is applied for all roles
-- role: '*'
-  stage: pre_deployment
-  type: shell
-  parameters:
-    cmd: echo all > /tmp/plugin.all
-    timeout: 42
+#- role: '*'
+#  stage: pre_deployment
+#  type: shell
+#  parameters:
+#    cmd: echo all > /tmp/plugin.all
+#    timeout: 42
 # "reboot" task reboots the nodes and waits until they get back online
 # - role: '*'
 #   stage: pre_deployment
