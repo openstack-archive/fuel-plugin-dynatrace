@@ -1,4 +1,4 @@
-Dynatrace Ruxit:
+dynatrace:
   # Role name
   name: "Dynatrace Ruxit"
   # Role description
