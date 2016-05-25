@@ -1,8 +1,6 @@
 attributes:
-  #metadata:
-    # Settings group can be one of "general", "security", "compute", "network",
-    # "storage", "logging", "openstack_services" and "other".
-    #group: 'other'
+  metadata:
+    group: 'other'
 
   ruxit_tenant:
     type: "text"
