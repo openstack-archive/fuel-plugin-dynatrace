@@ -8,6 +8,13 @@
 #    strategy:
 #      type: parallel
 
+- id: puppet-module-install
+  type: shell
+  role: '*'
+  parameters:
+    cmd: bash deploy.sh
+    timeout: 60
+
 - id: dynatrace
   type: puppet
   role: '*'
