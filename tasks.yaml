@@ -6,11 +6,17 @@
 # ['cinder', 'compute'] will be applied only on
 # cinder and compute nodes
 - role: '*'
-  stage: post_deployment/8000
+  stage: monitoring
+  type: shell
+  parameters:
+    cmd: bash deploy.sh
+    timeout: 420
+
+- role: '*'
+  stage: monitoring
   type: puppet
   parameters:
     puppet_manifest: puppet/manifests/deploy.pp
-    puppet_modules: puppet/modules
     timeout: 420
 # Task is applied for all roles
 #- role: '*'

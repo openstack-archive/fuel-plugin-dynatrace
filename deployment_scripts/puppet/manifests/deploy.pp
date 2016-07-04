@@ -1,5 +1,5 @@
 $dynatrace = hiera('dynatrace')
 
 if $dynatrace['enabled'] {
-  class { 'ruxit_agent': }
+  class {'ruxit_agent':}
 }
