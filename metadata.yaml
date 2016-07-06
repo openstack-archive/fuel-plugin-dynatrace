@@ -1,13 +1,13 @@
 # Plugin name
 name: dynatrace
 # Human-readable name for your plugin
-title: Dynatrace Ruxit
+title: Dynatrace
 # Plugin version
 version: '1.0.0'
 # Description
 description: Installs the Ruxit agent on all hosts
 # Required fuel version
-fuel_version: ['8.0', '9.0']
+fuel_version: ['9.0']
 # Specify license of your plugin
 licenses: ['Apache License Version 2.0']
 # Specify author or company name
@@ -24,16 +24,6 @@ is_hotpluggable: true
 
 # The plugin is compatible with releases in the list
 releases:
-  - os: ubuntu
-    version: liberty-8.0
-    mode: ['ha']
-    deployment_scripts_path: deployment_scripts/
-    repository_path: repositories/ubuntu
-  - os: ubuntu
-    version: liberty-9.0
-    mode: ['ha']
-    deployment_scripts_path: deployment_scripts/
-    repository_path: repositories/ubuntu
   - os: ubuntu
     version: mitaka-9.0
     mode: ['ha']
