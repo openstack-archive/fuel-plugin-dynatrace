@@ -1,4 +1,4 @@
-$dynatrace = hiera('dynatrace')
+$dynatrace = hiera('fuel-plugin-dynatrace')
 
 if $dynatrace['enabled'] {
   class { 'ruxit_agent':
