@@ -1,8 +1,8 @@
-dynatrace_ruxit:
+dynatrace:
   # Role name
-  name: "Dynatrace Ruxit"
+  name: "Dynatrace"
   # Role description
-  description: "Installs the Ruxit Agent"
+  description: "Installs the Dynatrace Agent"
   # If primary then during orchestration this role will be
   # separated into primary-role and role
   has_primary: false

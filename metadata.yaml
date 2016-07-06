@@ -5,7 +5,7 @@ title: Dynatrace
 # Plugin version
 version: '1.0.0'
 # Description
-description: Installs the Ruxit agent on all hosts
+description: Installs the Dynatrace agent on all hosts
 # Required fuel version
 fuel_version: ['9.0']
 # Specify license of your plugin

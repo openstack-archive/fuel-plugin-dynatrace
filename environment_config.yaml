@@ -2,22 +2,22 @@ attributes:
   metadata:
     group: 'other'
 
-  ruxit_tenant:
+  dynatrace_tenant:
     type: "text"
     weight: 20
     value: ""
-    label: "Ruxit Environment ID"
-    description: "Ruxit Environment ID description"
+    label: "Environment ID"
+    description: "Your Dynatrace environment ID"
     regex:
       source: '\S'
-      error: "Ruxit Environment ID must not be empty"
+      error: "Environment ID must not be empty"
 
-  ruxit_token:
+  dynatrace_token:
     type: "text"
     weight: 30
     value: ""
-    label: "Ruxit Token"
-    description: "Ruxit Token description"
+    label: "Token"
+    description: "Your Dynatrace environment token"
     regex:
       source: '\S'
-      error: "Ruxit Token must not be empty"
+      error: "Token must not be empty"

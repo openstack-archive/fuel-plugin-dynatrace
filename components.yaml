@@ -5,5 +5,5 @@
 # - https://specs.openstack.org/openstack/fuel-specs/specs/8.0/component-registry.html
 
 - name: additional_service:fuel-plugin-dynatrace
-  label: "Install Dynatrace Ruxit"
-  description: "Installs the Ruxit Agent on all hosts"
+  label: "Install Dynatrace Agent"
+  description: "Installs the Dynatrace Agent on all hosts"
