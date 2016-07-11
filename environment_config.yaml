@@ -1,7 +1,6 @@
 attributes:
   metadata:
     group: 'other'
-
   dynatrace_tenant:
     type: "text"
     weight: 20
@@ -11,7 +10,6 @@ attributes:
     regex:
       source: '\S'
       error: "Environment ID must not be empty"
-
   dynatrace_token:
     type: "text"
     weight: 30
