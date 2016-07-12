@@ -1,5 +1,5 @@
 # Plugin name
-name: dynatrace
+name: fuel-plugin-dynatrace
 # Human-readable name for your plugin
 title: Dynatrace
 # Plugin version
