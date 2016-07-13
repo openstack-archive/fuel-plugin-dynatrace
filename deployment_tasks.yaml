@@ -1,21 +1,7 @@
 # These tasks will be merged into deployment graph. Here you
 # can specify new tasks for any roles, even built-in ones.
 
-#- id: fuel-plugin-dynatrace_role
-#  type: group
-#  role: [fuel-plugin-dynatrace_role]
-#  parameters:
-#    strategy:
-#      type: parallel
-
-- id: puppet-module-install
-  type: shell
-  role: '*'
-  parameters:
-    cmd: bash deploy.sh
-    timeout: 60
-
-- id: dynatrace
+- id: fuel-plugin-dynatrace
   type: puppet
   role: '*'
   requires: [post_deployment_start]
