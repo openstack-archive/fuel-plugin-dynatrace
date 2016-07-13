@@ -1,0 +1,24 @@
+{
+	"author": "Sledge Sulaweyo",
+	"dependencies": [],
+	"license": "Apache-2.0",
+	"name": "sledge-http_download",
+	"operatingsystem_support": [{
+			"operatingsystem": "Windows"
+		},{
+			"operatingsystem": "RedHat"
+		},{
+			"operatingsystem": "Ubuntu"
+		},{
+			"operatingsystem": "Debian"
+		},{
+			"operatingsystem": "CentOS"
+		}
+	],
+	"project_page": "https://github.com/sulaweyo/http_download",
+	"requirements": [],
+	"source": "https://github.com/sulaweyo/http_download",
+	"summary": "Contains a type that allows simple http downloads via ruby.",
+	"tags": [],
+	"version": "0.1.7"
+}
