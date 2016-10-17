@@ -5,7 +5,7 @@ title: Dynatrace
 # Plugin version
 version: '1.0.0'
 # Description
-description: Installs the Dynatrace agent on hosts
+description: Installs the Dynatrace agent on controller nodes and Dynatrace security gateway on fuel master node
 # Required fuel version
 fuel_version: ['9.0']
 # Specify license of your plugin
@@ -13,7 +13,7 @@ licenses: ['Apache License Version 2.0']
 # Specify author or company name
 authors: ['Dirk Wallerstorfer (dirk.wallerstorfer@dynatrace.com), Dynatrace']
 # A link to the plugin's page
-homepage: 'https://github.com/openstack/fuel-plugins'
+homepage: 'https://github.com/Dynatrace/fuel-plugin-dynatrace'
 # Specify a group which your plugin implements, possible options:
 # network, storage, storage::cinder, storage::glance, hypervisor,
 # equipment

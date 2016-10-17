@@ -1,8 +1,8 @@
 dynatrace:
   # Role name
-  name: "Dynatrace"
+  name: "Dynatrace OneAgent"
   # Role description
-  description: "Installs the Dynatrace Agent"
+  description: "Installs the Dynatrace OneAgent"
   # If primary then during orchestration this role will be
   # separated into primary-role and role
   has_primary: false

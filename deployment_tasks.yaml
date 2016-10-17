@@ -2,8 +2,8 @@
 # can specify new tasks for any roles, even built-in ones.
 
 - id: fuel-plugin-dynatrace
+  role: ['controller']
   type: puppet
-  role: '*'
   requires: [post_deployment_start]
   required_for: [post_deployment_end]
   parameters:

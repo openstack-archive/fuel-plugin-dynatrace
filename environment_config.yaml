@@ -1,6 +1,7 @@
 attributes:
   metadata:
     group: 'other'
+  # Dynatrace environment ID
   dynatrace_tenant:
     type: "text"
     weight: 20
@@ -10,6 +11,7 @@ attributes:
     regex:
       source: '\S'
       error: "Environment ID must not be empty"
+  # Dynatrace environment token
   dynatrace_token:
     type: "text"
     weight: 30
@@ -19,3 +21,21 @@ attributes:
     regex:
       source: '\S'
       error: "Token must not be empty"
+  # Dynatrace Managed?
+  dynatrace_managed:
+    type: "checkbox"
+    weight: 40
+    value: false
+    label: "Do you use Dynatrace Managed?"
+    description: "Tick the checkbox if you are using Dynatrace Managed"
+  # Dynatrace Managed Server URL
+  dynatrace_managed_server:
+    type: "text"
+    weight: 40
+    value: ""
+    label: "Dynatrace server URL"
+    description: "Only needed if you have Dynatrace managed - use the URL
+    provided in the OneAgent installation screen (link)"
+    restrictions:
+      - condition: "settings:fuel-plugin-dynatrace.metadata.dynatrace_managed
+       != true"

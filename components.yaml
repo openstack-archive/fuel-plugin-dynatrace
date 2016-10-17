@@ -6,4 +6,5 @@
 
 - name: additional_service:fuel-plugin-dynatrace
   label: "Install Dynatrace Agent"
-  description: "Installs the Dynatrace Agent on all hosts"
+  description: "Installs the Dynatrace OneAgent on controller nodes and
+  Dynatrace Security Gateway on the Fuel master node"
