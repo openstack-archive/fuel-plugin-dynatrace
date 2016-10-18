@@ -21,12 +21,13 @@ attributes:
     regex:
       source: '\S'
       error: "Token must not be empty"
-  dynatrace_managed_server:
+  # Dynatrace Server URL
+  dynatrace_server:
     type: "text"
     weight: 40
     value: ""
-    label: "Dynatrace server URL"
-    description: "Only needed if you have Dynatrace managed - use the URL provided in the OneAgent installation screen (link)"
+    label: "Dynatrace Server URL"
+    description: "Use the URL provided in the OneAgent installation screen"
     regex:
       source: '\S'
       error: "Server URL must not be empty"

@@ -5,7 +5,7 @@ title: Dynatrace
 # Plugin version
 version: '1.0.0'
 # Description
-description: "Installs the Dynatrace agent on controller nodes and Dynatrace security gateway on fuel master node"
+description: "Installs the Dynatrace OneAgent on controller nodes and Dynatrace Security Gateway on fuel master node"
 # Required fuel version
 fuel_version: ['9.0']
 # Specify license of your plugin
