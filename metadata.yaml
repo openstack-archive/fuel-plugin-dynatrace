@@ -3,7 +3,7 @@ name: fuel-plugin-dynatrace
 # Human-readable name for your plugin
 title: Dynatrace
 # Plugin version
-version: '1.0.0'
+version: '1.0.1'
 # Description
 description: "Installs the Dynatrace OneAgent on controller nodes and Dynatrace Security Gateway on fuel master node"
 # Required fuel version
