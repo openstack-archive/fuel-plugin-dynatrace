@@ -1,4 +1,4 @@
-dynatrace:
+dynatrace-agent:
   # Role name
   name: "Dynatrace OneAgent"
   # Role description
@@ -11,3 +11,30 @@ dynatrace:
   # Weight that will be used to sort out the
   # roles on the Fuel web UI
   weight: 1000
+  conflicts:
+    - compute
+    - ceph-osd
+    - cinder
+    - base-os
+    - compute-vmware
+
+dynatrace-security-gateway:
+  # Role name
+  name: "Dynatrace Security Gateway"
+  # Role description
+  description: "Installs the Dynatrace Security Gateway"
+  # If primary then during orchestration this role will be
+  # separated into primary-role and role
+  has_primary: false
+  # Assign public IP to node if true
+  public_ip_required: false
+  # Weight that will be used to sort out the
+  # roles on the Fuel web UI
+  weight: 1000
+  conflicts:
+    - compute
+    - ceph-osd
+    - cinder
+    - base-os
+    - compute-vmware
+    - dynatrace-agent

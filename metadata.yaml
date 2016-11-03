@@ -3,9 +3,9 @@ name: fuel-plugin-dynatrace
 # Human-readable name for your plugin
 title: Dynatrace
 # Plugin version
-version: '1.0.1'
+version: '1.0.0'
 # Description
-description: "Installs the Dynatrace OneAgent on controller nodes and Dynatrace Security Gateway on fuel master node"
+description: "Installs the Dynatrace OneAgent and sets up the Dynatrace Security Gateway"
 # Required fuel version
 fuel_version: ['9.0']
 # Specify license of your plugin
@@ -31,3 +31,4 @@ releases:
     repository_path: repositories/ubuntu
 # Version of plugin package
 package_version: '4.0.0'
+
