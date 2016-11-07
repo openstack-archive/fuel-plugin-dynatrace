@@ -14,9 +14,6 @@ else {
   $url = "https://${tenant}.live.dynatrace.com/installer/agent/unix/latest/${token}"
 }
 
-notify {$url:} ->
-notify {$file:} ->
-
 download {'Download Dynatrace OneAgent':
   uri  => $url,
   dest => $file
