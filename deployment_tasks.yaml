@@ -1,13 +1,22 @@
-# These tasks will be merged into deployment graph. Here you
 # can specify new tasks for any roles, even built-in ones.
-
-- id: fuel-plugin-dynatrace
-  role: ['controller']
+- id: dynatace-agent
+  role: ['dynatrace-agent']
   type: puppet
+  version: 2.0.0
   requires: [post_deployment_start]
   required_for: [post_deployment_end]
   parameters:
-    puppet_manifest: puppet/manifests/deploy.pp
-    puppet_modules: puppet/modules
-    timeout: 3600
+    puppet_manifest: puppet/manifests/dynatrace-agent.pp
+    puppet_modules: puppet/modules:/etc/puppet/modules
+    timeout: 720
 
+- id: dynatrace-security-gateway
+  role: ['dynatrace-security-gateway']
+  type: puppet
+  version: 2.0.0
+  requires: [post_deployment_start]
+  required_for: [post_deployment_end]
+  parameters:
+    puppet_manifest: puppet/manifests/dynatrace-security-gateway.pp
+    puppet_modules: puppet/modules:/etc/puppet/modules
+    timeout: 720
