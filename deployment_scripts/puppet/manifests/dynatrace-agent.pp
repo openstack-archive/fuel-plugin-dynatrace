@@ -7,7 +7,7 @@ $server = $dynatrace['dynatrace_server']
 
 $file = "/tmp/Dynatrace-OneAgent.sh"
 
-if ($dynatrace['dynatrace_managed']) {
+if ($managed) {
   $url = "https://${server}/e/${tenant}/installer/agent/unix/latest/${token}/${tenant}"
 }
 else {

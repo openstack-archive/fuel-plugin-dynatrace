@@ -7,7 +7,7 @@ $server = $dynatrace['dynatrace_server']
 
 $file = "/tmp/Dynatrace-Security-Gateway.sh"
 
-if ($dynatrace['dynatrace_managed']) {
+if ($managed) {
   $url = "https://${server}/e/${tenant}/installer/sg/unix/latest/${token}/${tenant}"
 }
 else {
