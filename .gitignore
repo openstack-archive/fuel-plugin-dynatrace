@@ -2,3 +2,4 @@
 .build
 repositories/centos/*
 repositories/ubuntu/*
+*.rpm

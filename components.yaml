@@ -5,5 +5,5 @@
 # - https://specs.openstack.org/openstack/fuel-specs/specs/8.0/component-registry.html
 
 - name: additional_service:fuel-plugin-dynatrace
-  label: "Install Dynatrace Agent"
-  description: "Installs the Dynatrace OneAgent on controller nodes and Dynatrace Security Gateway on the Fuel master node"
+  label: "Install Dynatrace"
+  description: "Installs Dynatrace in your OpenStack cluster"
