@@ -14,6 +14,10 @@ else {
   $url = "https://${tenant}.live.dynatrace.com/installer/sg/unix/latest/${token}"
 }
 
+file { '/etc/hiera/plugins/dynatrace.yaml':
+  ensure -> file,
+} ->
+
 download {'Download Dynatrace Security Gateway':
   uri  => $url,
   dest => $file

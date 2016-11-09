@@ -1,5 +1,4 @@
-# can specify new tasks for any roles, even built-in ones.
-- id: dynatace-agent
+- id: dynatrace-agent
   role: ['dynatrace-agent']
   type: puppet
   version: 2.0.0

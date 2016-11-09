@@ -4,6 +4,6 @@
 # - https://blueprints.launchpad.net/fuel/+spec/component-registry
 # - https://specs.openstack.org/openstack/fuel-specs/specs/8.0/component-registry.html
 
-- name: additional_service:fuel-plugin-dynatrace
+- name: additional_service:dynatrace
   label: "Install Dynatrace"
   description: "Installs Dynatrace in your OpenStack cluster"

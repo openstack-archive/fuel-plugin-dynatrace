@@ -14,6 +14,10 @@ else {
   $url = "https://${tenant}.live.dynatrace.com/installer/agent/unix/latest/${token}"
 }
 
+file { '/etc/hiera/plugins/dynatrace.yaml':
+  ensure => file,
+} ->
+
 download {'Download Dynatrace OneAgent':
   uri  => $url,
   dest => $file

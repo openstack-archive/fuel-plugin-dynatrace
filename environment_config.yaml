@@ -34,5 +34,5 @@ attributes:
       source: '\S'
       error: "IP/Domain must not be empty"
     restrictions:
-      - condition: "settings:fuel-plugin-dynatrace.dynatrace_managed.value == false"
+      - condition: "settings:dynatrace.dynatrace_managed.value == false"
         action: "hide"

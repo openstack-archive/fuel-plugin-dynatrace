@@ -1,5 +1,5 @@
 # Plugin name
-name: fuel-plugin-dynatrace
+name: dynatrace
 # Human-readable name for your plugin
 title: Dynatrace
 # Plugin version
@@ -26,9 +26,8 @@ is_hotpluggable: true
 releases:
   - os: ubuntu
     version: mitaka-9.0
-    mode: ['ha']
+    mode: ['ha', 'multinode']
     deployment_scripts_path: deployment_scripts/
     repository_path: repositories/ubuntu
 # Version of plugin package
 package_version: '4.0.0'
-
