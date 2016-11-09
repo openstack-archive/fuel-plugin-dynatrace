@@ -1,4 +1,12 @@
 - id: dynatrace-agent
+  type: group
+  role: ['dynatrace-agent']
+  tasks: [hiera, globals, tools, logging, netconfig, hosts]
+  parameters:
+    strategy:
+      type: parallel
+
+- id: dynatrace-agent-install
   role: ['dynatrace-agent']
   type: puppet
   version: 2.0.0
@@ -10,6 +18,14 @@
     timeout: 720
 
 - id: dynatrace-security-gateway
+  type: group
+  role: ['dynatrace-security-gateway']
+  tasks: [hiera, globals, tools, logging, netconfig, hosts]
+  parameters:
+    strategy:
+      type: parallel
+
+- id: dynatrace-security-gateway-install
   role: ['dynatrace-security-gateway']
   type: puppet
   version: 2.0.0
