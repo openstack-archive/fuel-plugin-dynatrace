@@ -1,4 +1,4 @@
-$dynatrace = hiera('fuel-plugin-dynatrace')
+$dynatrace = hiera('dynatrace')
 
 $tenant = $dynatrace['dynatrace_tenant']
 $token = $dynatrace['dynatrace_token']
