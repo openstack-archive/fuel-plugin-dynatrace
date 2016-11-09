@@ -1,7 +1,7 @@
 - id: dynatrace-agent
   type: group
   role: ['dynatrace-agent']
-  tasks: [hiera, globals, tools, logging, netconfig, hosts]
+  tasks: [hiera, globals, hosts]
   parameters:
     strategy:
       type: parallel
@@ -20,7 +20,7 @@
 - id: dynatrace-security-gateway
   type: group
   role: ['dynatrace-security-gateway']
-  tasks: [hiera, globals, tools, logging, netconfig, hosts]
+  tasks: [hiera, globals, hosts]
   parameters:
     strategy:
       type: parallel
