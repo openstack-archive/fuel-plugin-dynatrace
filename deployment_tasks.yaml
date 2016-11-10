@@ -1,37 +1,40 @@
-- id: dynatrace-agent
+- id: dynatrace-base
   type: group
-  role: ['dynatrace-agent']
-  tasks: [hiera, globals, hosts]
+  role: [dynatrace-agent]
+  required_for: [dynatrace-agent, dynatrace-security-gateway]
+  tasks:
+    - fuel_pkgs
+    - hiera
+    - globals
+    - tools
+    - logging
+    - netconfig
+    - connectivity_tests
+    - hosts
   parameters:
     strategy:
-      type: parallel
+      type: one-by-one
 
-- id: dynatrace-agent-install
-  role: ['dynatrace-agent']
+- id: dynatrace-agent
+  role: [dynatrace-agent]
   type: puppet
-  version: 2.0.0
-  requires: [post_deployment_start]
+  groups: [dynatrace-base]
+  version: 2.1.0
   required_for: [post_deployment_end]
+  requires: [hiera, globals]
   parameters:
     puppet_manifest: puppet/manifests/dynatrace-agent.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
-    timeout: 720
+    timeout: 360
 
 - id: dynatrace-security-gateway
-  type: group
-  role: ['dynatrace-security-gateway']
-  tasks: [hiera, globals, hosts]
-  parameters:
-    strategy:
-      type: parallel
-
-- id: dynatrace-security-gateway-install
-  role: ['dynatrace-security-gateway']
+  role: [dynatrace-security-gateway]
   type: puppet
-  version: 2.0.0
-  requires: [post_deployment_start]
+  groups: [dynatrace-base]
+  version: 2.1.0
   required_for: [post_deployment_end]
+  requires: [hiera, globals]
   parameters:
     puppet_manifest: puppet/manifests/dynatrace-security-gateway.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
-    timeout: 720
+    timeout: 360

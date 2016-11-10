@@ -30,7 +30,7 @@ dynatrace-security-gateway:
   public_ip_required: false
   # Weight that will be used to sort out the
   # roles on the Fuel web UI
-  weight: 1000
+  weight: 1001
   conflicts:
     - compute
     - ceph-osd
