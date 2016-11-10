@@ -1,7 +1,18 @@
-- id: dynatrace-base
-  type: group
+- id: dynatrace-agent
   role: [dynatrace-agent]
-  required_for: [dynatrace-agent, dynatrace-security-gateway]
+  type: puppet
+  version: 2.1.0
+  required_for: [post_deployment_end]
+  requires: [hiera, globals]
+  parameters:
+    puppet_manifest: puppet/manifests/dynatrace-agent.pp
+    puppet_modules: puppet/modules:/etc/puppet/modules
+    timeout: 360
+
+- id: dynatrace-sg-base
+  type: group
+  role: [dynatrace-security-gateway]
+  required_for: [dynatrace-security-gateway]
   tasks:
     - fuel_pkgs
     - hiera
@@ -15,22 +26,10 @@
     strategy:
       type: one_by_one
 
-- id: dynatrace-agent
-  role: [dynatrace-agent]
-  type: puppet
-  groups: [dynatrace-base]
-  version: 2.1.0
-  required_for: [post_deployment_end]
-  requires: [hiera, globals]
-  parameters:
-    puppet_manifest: puppet/manifests/dynatrace-agent.pp
-    puppet_modules: puppet/modules:/etc/puppet/modules
-    timeout: 360
-
 - id: dynatrace-security-gateway
   role: [dynatrace-security-gateway]
   type: puppet
-  groups: [dynatrace-base]
+  groups: [dynatrace-sg-base]
   version: 2.1.0
   required_for: [post_deployment_end]
   requires: [hiera, globals]
