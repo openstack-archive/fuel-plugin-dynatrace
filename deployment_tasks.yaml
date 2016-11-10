@@ -13,7 +13,7 @@
     - hosts
   parameters:
     strategy:
-      type: one-by-one
+      type: one_by_one
 
 - id: dynatrace-agent
   role: [dynatrace-agent]

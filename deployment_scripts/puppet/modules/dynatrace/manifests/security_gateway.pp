@@ -18,7 +18,7 @@ class dynatrace::security_gateway {
   } ->
 
   exec { 'install_security_gateway':
-    command => "/bin/sh ${file} APP_LOG_CONTENT_ACCESS=1",
+    command => "/bin/sh ${file}",
     path => $::path
   }
 }
