@@ -30,12 +30,25 @@ Configure Dynatrace Plugin
 3. Enable the plugin and fill the configuration fields with correct values
 of your Dynatrace environment (Settings > Other > Dynatrace).
 
- - Dynatrace Environment ID: your Dynatrace environment ID
- - Dynatrace Token: your Dynatrace environment token
+ - Environment ID: your Dynatrace environment ID
+ - Token: your Dynatrace environment token
+ - Managed IP/Domain: if you have a Dynatrace Managed node/cluster setup in
+ your environment, provide the IP address or the domain name
 
-4. Add nodes and assign the *Dynatrace* role to all nodes. Sample node
-configuration is provided below. [IMAGE]
+4. Add nodes and assign the *Dynatrace OneAgent* role to all controller nodes.
+Assign the *Dynatrace Security Gateway* role to a node and don't assign any 
+other roles to that node. Sample node configuration is provided below.
 
 5. Finish the configuration according to your requirements.
 
 6. Press *Deploy changes* to deploy the environment.
+
+Validate Dynatrace Plugin
+'''''''''''''''''''''''''
+1. After a successful deployment, ssh to the controller nodes and make sure 
+ that there is a *oneagentwatchdog* process running.
+2. After a successful deployment, ssh to the node with the *Dynatrace Security* 
+ *Gateway* role. Make sure that there is a *dyntracegateway* process running.
+3. After a successful deployment, log in to your Dynatrace environment and make
+ sure that you find all nodes with the *Dynatrace OneAgent* role  in the host
+ view and that you see, that one Security Gateway has been found in your environment.
