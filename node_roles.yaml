@@ -1,4 +1,4 @@
-dynatrace-agent:
+dynatrace-oneagent:
   # Role name
   name: "Dynatrace OneAgent"
   # Role description
@@ -37,4 +37,4 @@ dynatrace-security-gateway:
     - cinder
     - base-os
     - compute-vmware
-    - dynatrace-agent
+    - dynatrace-oneagent

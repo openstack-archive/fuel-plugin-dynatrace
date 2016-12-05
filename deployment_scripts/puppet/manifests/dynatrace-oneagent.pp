@@ -1,4 +1,4 @@
-notice('MODULAR: dynatrace/dynatrace-agent.pp')
+notice('MODULAR: dynatrace/dynatrace-oneagent.pp')
 
 include dynatrace
 class { 'dynatrace::oneagent': }

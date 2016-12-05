@@ -1,11 +1,11 @@
-- id: dynatrace-agent
-  role: [dynatrace-agent]
+- id: dynatrace-oneagent
+  role: [dynatrace-oneagent]
   type: puppet
   version: 2.1.0
   required_for: [post_deployment_end]
   requires: [hiera, globals]
   parameters:
-    puppet_manifest: puppet/manifests/dynatrace-agent.pp
+    puppet_manifest: puppet/manifests/dynatrace-oneagent.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
     timeout: 360
 
