@@ -8,6 +8,8 @@
     puppet_manifest: puppet/manifests/dynatrace-oneagent.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
     timeout: 360
+  reexecute_on:
+    - deploy_changes
 
 - id: dynatrace-sg-base
   type: group
@@ -25,6 +27,8 @@
   parameters:
     strategy:
       type: one_by_one
+  reexecute_on:
+    - deploy_changes
 
 - id: dynatrace-security-gateway
   role: [dynatrace-security-gateway]
@@ -37,3 +41,5 @@
     puppet_manifest: puppet/manifests/dynatrace-security-gateway.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
     timeout: 360
+  reexecute_on:
+    - deploy_changes
