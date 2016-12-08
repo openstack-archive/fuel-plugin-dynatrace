@@ -1,5 +1,5 @@
 - id: dynatrace-oneagent
-  role: [dynatrace-oneagent]
+  role: [primary-controller, controller]
   type: puppet
   version: 2.1.0
   required_for: [post_deployment_end]

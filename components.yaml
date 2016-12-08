@@ -7,3 +7,6 @@
 - name: additional_service:dynatrace
   label: "Install Dynatrace"
   description: "Installs Dynatrace in your OpenStack cluster"
+  compatible: []
+  requires: []
+  incompatible: []
