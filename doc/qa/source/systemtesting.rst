@@ -27,6 +27,9 @@ Install plugin and deploy environment
 #. All OSTF tests pass. 
 #. Environment is deployed successfully.
 
+.. raw:: latex
+
+    \newpage
 
 Modifying environment with enabled plugin (remove/add controller nodes)
 -----------------------------------------------------------------------
@@ -61,6 +64,9 @@ Modifying environment with enabled plugin (remove/add controller nodes)
 #. Environment is deployed successfully. 
 #. The environment is redeployed successfully when adding/removing a controller node.
 
+.. raw:: latex
+
+    \newpage
 
 Modifying environment with enabled plugin (remove/add compute nodes)
 --------------------------------------------------------------------
@@ -95,6 +101,9 @@ Modifying environment with enabled plugin (remove/add compute nodes)
 #. Environment is deployed successfully. 
 #. The environment is redeployed successfully when adding/removing a compute node.
 
+.. raw:: latex
+
+    \newpage
 
 Uninstall of plugin in the deployed environment
 -----------------------------------------------
@@ -125,6 +134,9 @@ Uninstall of plugin in the deployed environment
 #. Environment is deployed successfully. 
 #. An alert is displayed when trying to uninstall the plugin.
 
+.. raw:: latex
+
+    \newpage
 
 Uninstall of plugin in the non-deployed environment
 ---------------------------------------------------
@@ -150,6 +162,9 @@ Uninstall of plugin in the non-deployed environment
 #. The plugin is enabled and configured in the Fuel Web UI. 
 #. When uninstalling the plugin, no plugin-related elements are left in the environment (e.g. UI elements disappear, Nailgun database is restored to the default state, no output for command "fuel plugins --list").
 
+.. raw:: latex
+
+    \newpage
 
 Verify hot-pluggable functionality of the plugin
 ------------------------------------------------
