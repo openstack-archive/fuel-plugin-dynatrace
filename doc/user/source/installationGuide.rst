@@ -43,7 +43,9 @@ of your Dynatrace environment (Settings > Other > Dynatrace).
 Assign the *Dynatrace Security Gateway* role to a node and don't assign any 
 other roles to that node. Sample node configuration is provided below.
 
-.. image:: images/9yl01.png
+.. image:: images/uh37r.png
+
+.. image:: images/k9ma8.png
 
 5. Finish the configuration according to your requirements.
 
