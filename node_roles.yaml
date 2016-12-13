@@ -17,6 +17,7 @@ dynatrace-oneagent:
     - cinder
     - base-os
     - compute-vmware
+    - virtual
 
 dynatrace-security-gateway:
   # Role name
@@ -32,9 +33,11 @@ dynatrace-security-gateway:
   # roles on the Fuel web UI
   weight: 1001
   conflicts:
+    - controller
     - compute
     - ceph-osd
     - cinder
     - base-os
     - compute-vmware
     - dynatrace-oneagent
+    - virtual
