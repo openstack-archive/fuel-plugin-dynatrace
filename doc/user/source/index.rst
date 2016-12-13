@@ -13,3 +13,4 @@ Guide to the Dynatrace plugin version 1.0-1.0.0-1 for Fuel 9.0
     limitations
     releaseNotes
     installationGuide
+    appendix
