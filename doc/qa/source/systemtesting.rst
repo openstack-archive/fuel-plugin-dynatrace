@@ -15,9 +15,9 @@ Steps           1. Install plugin using Fuel CLI, refer to the `Installation
                    fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
                    tall_plugins.html>`_
                 #. Create environment with enabled plugin in Fuel Web UI
-                #. Add 3 controller nodes and apply the Dynatrace OneAgent 
-                   role to all 3, 1 compute node, and 1 Dynatrace Security 
-                   Gateway node
+                #. Add 3 controller nodes and apply the Controller role to 
+                   all 3, 1 compute node, and 1 Dynatrace Security Gateway 
+                   node
                 #. Run network verification
                 #. Deploy the cluster
                 #. Verify there were no error messages during the deployment
@@ -43,7 +43,7 @@ Steps           1. Install plugin using Fuel CLI, refer to the `Installation
                    fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
                    tall_plugins.html>`_
                 #. Create environment with enabled plugin in Fuel Web UI
-                #. Add 3 controller nodes and apply the Dynatrace OneAgent 
+                #. Add 3 controller nodes and apply the Controller 
                    role to all 3, 1 compute node, and 1 Dynatrace Security 
                    Gateway node
                 #. Run network verification
@@ -79,7 +79,7 @@ Steps           1. Install plugin using Fuel CLI, refer to the `Installation
                    fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
                    tall_plugins.html>`_
                 #. Create environment with enabled plugin in Fuel Web UI
-                #. Add 3 controller nodes and apply the Dynatrace OneAgent 
+                #. Add 3 controller nodes and apply the Controller 
                    role to all 3, 1 compute node, and 1 Dynatrace Security 
                    Gateway node
                 #. Run network verification
@@ -115,7 +115,7 @@ Steps           1. Install plugin using Fuel CLI, refer to the `Installation
                    fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
                    tall_plugins.html>`_
                 #. Create environment with enabled plugin in Fuel Web UI
-                #. Add 3 controller nodes and apply the Dynatrace OneAgent 
+                #. Add 3 controller nodes and apply the Controller 
                    role to all 3, 1 compute node, and 1 Dynatrace Security 
                    Gateway node
                 #. Run network verification
@@ -149,7 +149,7 @@ Steps           1. Install plugin using Fuel CLI, refer to the `Installation
                    fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
                    tall_plugins.html>`_
                 #. Create environment with enabled plugin in Fuel Web UI
-                #. Add 3 controller nodes and apply the Dynatrace OneAgent 
+                #. Add 3 controller nodes and apply the Controller 
                    role to all 3, 1 compute node, and 1 Dynatrace Security 
                    Gateway node
                 #. Run network verification
@@ -165,7 +165,46 @@ Expected Result Plugin is installed successfully. The cluster is created and
                 default state, no output for command "fuel plugins --list").
 =============== =====
 
+**Verify hot-pluggable functionality of the plugin**
 
+=============== =====
+Test Case ID    hot_pluggable_plugin
+--------------- -----
+Steps           1. Install plugin using Fuel CLI, refer to the `Installation
+                   Guide <http://docs.openstack.org/developer/fuel-docs/user
+                   docs/fuel-install-guide/plugins/plugins_install_plugins.h
+                   tml>`_
+                #. Ensure plugin is successfully installed, as in the 
+                   `Installation Guide <http://docs.openstack.org/developer/
+                   fuel-docs/userdocs/fuel-install-guide/plugins/plugins_ins
+                   tall_plugins.html>`_
+                #. Create environment with disabled plugin in Fuel Web UI
+                #. Add 1 controller node and apply the Controller 
+                   role and 1 compute node
+                #. Run network verification
+                #. Deploy the cluster
+                #. Verify there were no error messages during the deployment
+                #. Run health check
+                #. Verify that no Dynatrace processes are running on either
+                   the controller node, nor the compute node
+                #. Enable the plugin and fill out mandatory fields
+                #. Add 2 controller nodes and 1 Dynatrace Security Gateway
+                   node
+                #. Run network verification
+                #. Redeploy the cluster
+                #. Verify there were no error messages during the deployment
+                #. Run health check
+                #. Verify that Dynatrace OneAgent is running on all
+                   controller nodes
+--------------- -----
+Expected Result Plugin is installed successfully. When the plugin is disabled
+                no Dynatrace component is installed. It's possible to 
+                redeploy the cluster with the plugin activated. Then the 
+                Dynatrace OneAgent is installed on the controller nodes, the 
+                Dynatrace Security Gateway is setup successfully. All OSTF 
+                tests pass. Environment is deployed successfully. The 
+                environment is redeployed successfully when adding nodes.
+=============== =====
 
 
 

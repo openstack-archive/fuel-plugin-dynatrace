@@ -39,7 +39,7 @@ of your Dynatrace environment (Settings > Other > Dynatrace).
 
 .. image:: images/9yl01.png
 
-4. Add nodes and assign the *Dynatrace OneAgent* role to all controller nodes.
+4. Add nodes and assign the Controller role to all controller nodes.
 Assign the *Dynatrace Security Gateway* role to a node and don't assign any 
 other roles to that node. Sample node configuration is provided below.
 
